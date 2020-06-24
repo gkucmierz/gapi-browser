@@ -5,6 +5,7 @@
 /tmp
 /out-tsc
 /release
+/lib
 
 # Only exists if Bazel was run
 /bazel-out
