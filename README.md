@@ -3,12 +3,12 @@
 Promise based package that is helping attaching actual google api script in browser
 
 ### Install
-```
+```bash
 npm i gapi-browser
 ```
 
 ### Using
-```
+```js
 import { getGapi } from 'gapi-browser';
 
 getGapi.then(gapi => {
