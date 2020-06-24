@@ -1,9 +1,9 @@
 {
   "name": "gapi-browser",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Promise based package that is helping attaching actual google api script in browser",
   "main": "lib/main.js",
-  "types": "lib/index.d.ts",
+  "types": "lib/main.d.ts",
   "files": [
     "lib/**/*"
   ],
@@ -17,7 +17,14 @@
     "type": "git",
     "url": "git+https://github.com/gkucmierz/gapi-browser.git"
   },
-  "keywords": ["gapi", "google", "api", "browser", "script", "promise"],
+  "keywords": [
+    "gapi",
+    "google",
+    "api",
+    "browser",
+    "script",
+    "promise"
+  ],
   "author": "gkucmierz",
   "license": "MIT",
   "bugs": {
