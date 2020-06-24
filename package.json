@@ -17,8 +17,8 @@
     "type": "git",
     "url": "git+https://github.com/gkucmierz/gapi-browser.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["gapi", "google", "api", "browser", "script", "promise"],
+  "author": "gkucmierz",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/gkucmierz/gapi-browser/issues"
