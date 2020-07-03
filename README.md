@@ -4,7 +4,7 @@ Promise based package that is helping attaching actual google api script in brow
 
 ### Install
 ```bash
-npm i gapi-browser
+npm i gapi-browser --save
 ```
 
 ### Using
