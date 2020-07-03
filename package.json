@@ -1,6 +1,6 @@
 {
   "name": "gapi-browser",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Promise based package that is helping attaching actual google api script in browser",
   "main": "lib/main.js",
   "types": "lib/main.d.ts",
