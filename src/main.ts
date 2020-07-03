@@ -1,8 +1,10 @@
 
+import { waitProp } from 'wait-prop';
+
 const GAPI_SCRIPT_HTTP = 'http://apis.google.com/js/api.js';
 const GAPI_SCRIPT_HTTPS = 'https://apis.google.com/js/api.js';
 const GAPI_MAIN_OBJECT = 'gapi';
-const DELAY = 50;
+const document = window.document;
 
 let gapiResolve: Function;
 export const getGapi = new Promise(resolve => gapiResolve = resolve);
@@ -16,17 +18,6 @@ const callOnce = (fn: Function) => {
   };
 };
 
-const waitFor = (object: any, property: string, delay = DELAY) => new Promise(resolve => {
-  const loop = () => {
-    if (property in object) {
-      resolve(object[property]);
-    } else {
-      setTimeout(loop, delay);
-    }
-  }
-  loop();
-});
-
 const addGapiScript = () => {
   const script = document.createElement('script');
   script.type = 'text/javascript';
@@ -39,7 +30,7 @@ const addGapiScript = () => {
 
 const domReady = callOnce(() => {
   addGapiScript();
-  waitFor(window, GAPI_MAIN_OBJECT).then((gapi: any) => gapiResolve(gapi));
+  waitProp(window, GAPI_MAIN_OBJECT).then((gapi: any) => gapiResolve(gapi));
 });
 
 const init = () => {
